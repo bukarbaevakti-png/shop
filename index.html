@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="LuxeHub - Premium E-Commerce Platform for Luxury Goods" />
+    <title>LuxeHub - Premium Luxury E-Commerce</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-wrapper">
+          <div class="logo">
+            <i class="fas fa-crown"></i>
+            <span>LuxeHub</span>
+          </div>
+
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#shop">Shop</a></li>
+            <li>
+              <a href="#categories">Categories</a>
+              <ul class="dropdown">
+                <li><a href="#categories">Electronics</a></li>
+                <li><a href="#categories">Fashion</a></li>
+                <li><a href="#categories">Shoes</a></li>
+                <li><a href="#categories">Watches</a></li>
+                <li><a href="#categories">Beauty</a></li>
+                <li><a href="#categories">Home & Living</a></li>
+              </ul>
+            </li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+
+          <div class="nav-right">
+            <div class="search-box">
+              <input type="text" placeholder="Search products..." />
+              <button type="button">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+            <a href="#cart" class="nav-icon">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="badge">0</span>
+            </a>
+            <a href="#profile" class="nav-icon">
+              <i class="fas fa-user-circle"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-background"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 class="hero-title">Discover Luxury</h1>
+        <p class="hero-subtitle">Curated collection of premium goods for the discerning taste</p>
+        <button class="btn btn-primary">
+          Shop Now
+          <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="categories" id="categories">
+      <div class="container">
+        <div class="section-header">
+          <h2>Featured Categories</h2>
+          <p>Explore our carefully curated collections</p>
+        </div>
+
+        <div class="categories-grid">
+          <div class="category-card">
+            <div class="category-image">
+              <i class="fas fa-laptop"></i>
+            </div>
+            <h3>Electronics</h3>
+            <p>Premium tech & gadgets</p>
+          </div>
+
+          <div class="category-card">
+            <div class="category-image">
+              <i class="fas fa-shirt"></i>
+            </div>
+            <h3>Fashion</h3>
+            <p>Luxury apparel collection</p>
+          </div>
+
+          <div class="category-card">
+            <div class="category-image">
+              <i class="fas fa-shoe-prints"></i>
+            </div>
+            <h3>Shoes</h3>
+            <p>Designer footwear</p>
+          </div>
+
+          <div class="category-card">
+            <div class="category-image">
+              <i class="fas fa-watch"></i>
+            </div>
+            <h3>Watches</h3>
+            <p>Fine timepieces</p>
+          </div>
+
+          <div class="category-card">
+            <div class="category-image">
+              <i class="fas fa-spa"></i>
+            </div>
+            <h3>Beauty</h3>
+            <p>Premium cosmetics</p>
+          </div>
+
+          <div class="category-card">
+            <div class="category-image">
+              <i class="fas fa-home"></i>
+            </div>
+            <h3>Home & Living</h3>
+            <p>Luxury home decor</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="products" id="shop">
+      <div class="container">
+        <div class="section-header">
+          <h2>Featured Products</h2>
+          <p>Hand-picked selections from our finest collection</p>
+        </div>
+
+        <div class="products-grid">
+          <!-- Product 1 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=400&q=80" alt="Premium Smartwatch" />
+              <div class="discount-badge">-25%</div>
+              <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div class="product-info">
+              <h3>Premium Smartwatch</h3>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(342)</span>
+              </div>
+              <div class="price-group">
+                <span class="original-price">$599</span>
+                <span class="sale-price">$449</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=400&q=80" alt="Luxury Sunglasses" />
+              <div class="discount-badge">-30%</div>
+              <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div class="product-info">
+              <h3>Luxury Sunglasses</h3>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>(521)</span>
+              </div>
+              <div class="price-group">
+                <span class="original-price">$399</span>
+                <span class="sale-price">$279</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1552062407-291826da3254?auto=format&fit=crop&w=400&q=80" alt="Designer Handbag" />
+              <div class="discount-badge">-20%</div>
+              <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div class="product-info">
+              <h3>Designer Handbag</h3>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(289)</span>
+              </div>
+              <div class="price-group">
+                <span class="original-price">$1,299</span>
+                <span class="sale-price">$1,039</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 4 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=400&q=80" alt="Premium Headphones" />
+              <div class="discount-badge new">New</div>
+              <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div class="product-info">
+              <h3>Premium Headphones</h3>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>(612)</span>
+              </div>
+              <div class="price-group">
+                <span class="original-price">$899</span>
+                <span class="sale-price">$899</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 5 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1547514701-42782101795e?auto=format&fit=crop&w=400&q=80" alt="Luxury Sneakers" />
+              <div class="discount-badge">-15%</div>
+              <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div class="product-info">
+              <h3>Luxury Sneakers</h3>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <span>(198)</span>
+              </div>
+              <div class="price-group">
+                <span class="original-price">$799</span>
+                <span class="sale-price">$679</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 6 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=400&q=80" alt="Elegant Perfume" />
+              <div class="discount-badge">-35%</div>
+              <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div class="product-info">
+              <h3>Elegant Perfume</h3>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>(445)</span>
+              </div>
+              <div class="price-group">
+                <span class="original-price">$299</span>
+                <span class="sale-price">$194</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 7 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1523293182986-7651a695d37d?auto=format&fit=crop&w=400&q=80" alt="Gold Watch" />
+              <div class="discount-badge">-28%</div>
+              <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div class="product-info">
+              <h3>Gold Watch</h3>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <span>(356)</span>
+              </div>
+              <div class="price-group">
+                <span class="original-price">$1,899</span>
+                <span class="sale-price">$1,368</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 8 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=400&q=80" alt="Premium Silk Scarf" />
+              <div class="discount-badge">-22%</div>
+              <button class="add-to-cart-btn">Add to Cart</button>
+            </div>
+            <div class="product-info">
+              <h3>Premium Silk Scarf</h3>
+              <div class="rating">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+                <i class="far fa-star"></i>
+                <span>(167)</span>
+              </div>
+              <div class="price-group">
+                <span class="original-price">$450</span>
+                <span class="sale-price">$351</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Special Offer Banner -->
+    <section class="special-offer">
+      <div class="container">
+        <div class="offer-content">
+          <h2>Exclusive Summer Collection</h2>
+          <p>Up to 50% off on selected items</p>
+          <button class="btn btn-secondary">
+            Shop Collection
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-choose-us">
+      <div class="container">
+        <div class="section-header">
+          <h2>Why Choose LuxeHub</h2>
+          <p>We deliver excellence in every aspect</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <h3>Fast Delivery</h3>
+            <p>Express shipping to your doorstep within 2-3 business days</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-lock"></i>
+            </div>
+            <h3>Secure Payment</h3>
+            <p>Bank-level encryption protects your financial information</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-crown"></i>
+            </div>
+            <h3>Premium Quality</h3>
+            <p>Authentic products sourced from leading luxury brands</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-headset"></i>
+            </div>
+            <h3>24/7 Support</h3>
+            <p>Round-the-clock customer service for your peace of mind</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section class="reviews">
+      <div class="container">
+        <div class="section-header">
+          <h2>Customer Reviews</h2>
+          <p>What our valued customers say about us</p>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="review-text">"LuxeHub exceeded my expectations. The quality is impeccable and the service is outstanding. Highly recommended!"</p>
+            <div class="reviewer-info">
+              <div class="reviewer-avatar">JD</div>
+              <div>
+                <p class="reviewer-name">John Davidson</p>
+                <p class="reviewer-title">Verified Buyer</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="review-text">"The elegance and craftsmanship of the products speak for themselves. Worth every penny!"</p>
+            <div class="reviewer-info">
+              <div class="reviewer-avatar">SM</div>
+              <div>
+                <p class="reviewer-name">Sarah Martinez</p>
+                <p class="reviewer-title">Verified Buyer</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="review-text">"Exceptional quality and beautiful presentation. The packaging alone was worth the purchase!"</p>
+            <div class="reviewer-info">
+              <div class="reviewer-avatar">AK</div>
+              <div>
+                <p class="reviewer-name">Alexander Kim</p>
+                <p class="reviewer-title">Verified Buyer</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brand Logos -->
+    <section class="brand-logos">
+      <div class="container">
+        <h2 class="section-title">Featured Brands</h2>
+        <div class="brands-grid">
+          <div class="brand-item">
+            <i class="fas fa-crown"></i>
+            <span>Premium</span>
+          </div>
+          <div class="brand-item">
+            <i class="fas fa-gem"></i>
+            <span>Luxury</span>
+          </div>
+          <div class="brand-item">
+            <i class="fas fa-star"></i>
+            <span>Elite</span>
+          </div>
+          <div class="brand-item">
+            <i class="fas fa-heart"></i>
+            <span>Prestige</span>
+          </div>
+          <div class="brand-item">
+            <i class="fas fa-diamond"></i>
+            <span>Signature</span>
+          </div>
+          <div class="brand-item">
+            <i class="fas fa-trophy"></i>
+            <span>Excellence</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Subscription -->
+    <section class="newsletter">
+      <div class="container">
+        <div class="newsletter-content">
+          <h2>Join Our Exclusive Club</h2>
+          <p>Subscribe to receive updates on new collections, exclusive offers, and luxury tips</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Enter your email address" required />
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+          </form>
+          <p class="newsletter-note">We respect your privacy. Unsubscribe at any time.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-section">
+            <h3>About LuxeHub</h3>
+            <p>Your premier destination for authentic luxury goods and curated collections from the world's finest brands.</p>
+            <div class="social-links">
+              <a href="#" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#shop">Shop</a></li>
+              <li><a href="#categories">Categories</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#blog">Blog</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3>Customer Service</h3>
+            <ul>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Shipping Info</a></li>
+              <li><a href="#">Returns & Exchanges</a></li>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Track Order</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h3>Contact Information</h3>
+            <p>
+              <i class="fas fa-map-marker-alt"></i>
+              123 Luxury Avenue, Fashion District<br />
+              New York, NY 10001
+            </p>
+            <p>
+              <i class="fas fa-phone"></i>
+              +1 (800) 123-4567
+            </p>
+            <p>
+              <i class="fas fa-envelope"></i>
+              support@luxehub.com
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2024 LuxeHub. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <a href="#home" class="scroll-to-top">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+  </body>
+</html>
