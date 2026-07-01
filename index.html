@@ -1,235 +1,162 @@
 <!DOCTYPE html>
-<html lang="ky">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Кыргыз этно кийимдери үчүн премиум онлайн дүкен" />
-    <title>Кыргыз Этно Кийимдери</title>
+    <meta name="theme-color" content="#1f7a6b" />
+    <title>GameHub — Android App Store</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Header -->
-    <header class="header">
-      <div class="container">
-        <nav class="navbar">
-          <a href="#home" class="logo">
-            <i class="fas fa-gem"></i>
-            <span>Кыргыз Этно</span>
-          </a>
-
-          <ul class="nav-links">
-            <li><a href="#home">Башкы бет</a></li>
-            <li><a href="#catalog">Каталог</a></li>
-            <li><a href="#about">Биз жөнүндө</a></li>
-            <li><a href="#contact">Байланыш</a></li>
-          </ul>
-
-          <a href="#catalog" class="cart-btn">
-            <i class="fas fa-shopping-bag"></i>
-            Себет
-          </a>
-        </nav>
-      </div>
-    </header>
-
-    <!-- Hero -->
-    <section class="hero" id="home">
-      <div class="hero-overlay"></div>
-      <div class="container hero-content">
-        <div class="hero-text">
-          <p class="eyebrow">Этно стилдин премиум чыгарылышы</p>
-          <h1>Кыргыз Этно Кийимдери</h1>
-          <p>Улуттук каармандуулук, тазалык жана бай өрнектердин символу — сиз үчүн таңдалган кийимдер.</p>
-          <a href="#catalog" class="btn">Азыр сатып алуу</a>
+    <div class="app-shell">
+      <header class="app-header">
+        <div class="brand">
+          <div class="brand-icon">G</div>
+          <div>
+            <p class="eyebrow">Android Store</p>
+            <h1>GameHub</h1>
+          </div>
         </div>
-      </div>
-    </section>
+        <button class="icon-btn" type="button">☰</button>
+      </header>
 
-    <!-- Catalog -->
-    <section class="catalog-section" id="catalog">
-      <div class="container">
-        <div class="section-title">
-          <p class="eyebrow">Каталог</p>
-          <h2>Кызматта турган негизги товарлар</h2>
-        </div>
+      <main class="app-main">
+        <section id="home-screen" class="screen active">
+          <div class="hero-card">
+            <div>
+              <p class="eyebrow">Новые релизы</p>
+              <h2>Откройте лучшие игры недели</h2>
+              <p>Современный магазин с быстрым доступом, красивым интерфейсом и удобной установкой.</p>
+            </div>
+            <button class="primary-btn" type="button" data-target="register">Регистрация</button>
+          </div>
 
-        <div class="product-grid">
-          <article class="product-card">
-            <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=80" alt="Кыргыз андоимасы" />
-            <div class="product-info">
-              <h3>Андагай кийими</h3>
-              <p>Классикалык үлгүсү</p>
-              <div class="product-footer">
-                <span>18 500 сом</span>
-                <a href="#contact" class="buy-btn">Сатып алуу</a>
+          <div class="search-card">
+            <span>🔍</span>
+            <input id="searchInput" type="text" placeholder="Найти игру" />
+          </div>
+
+          <div class="section-title">
+            <h3>Категории</h3>
+            <a href="#">Все</a>
+          </div>
+          <div class="chip-row">
+            <button class="chip active" type="button">Экшен</button>
+            <button class="chip" type="button">Головоломки</button>
+            <button class="chip" type="button">Спорт</button>
+            <button class="chip" type="button">РПГ</button>
+          </div>
+
+          <div class="banner-card">
+            <div>
+              <p class="eyebrow">Топ-игра</p>
+              <h3>Sky Blazer 2</h3>
+              <p>Быстрые сражения и потрясающая графика.</p>
+            </div>
+            <button class="primary-btn" type="button" data-game="1">Играть</button>
+          </div>
+
+          <div class="section-title">
+            <h3>Популярные игры</h3>
+          </div>
+          <div id="gameList" class="game-list"></div>
+        </section>
+
+        <section id="register-screen" class="screen">
+          <div class="panel-card">
+            <div class="panel-header">
+              <button class="back-btn" type="button" data-target="home">←</button>
+              <h2>Регистрация</h2>
+            </div>
+            <form id="registerForm" class="register-form">
+              <label>
+                Имя
+                <input type="text" name="firstName" required />
+              </label>
+              <label>
+                Фамилия
+                <input type="text" name="lastName" required />
+              </label>
+              <label>
+                Номер телефона
+                <input type="tel" name="phone" required />
+              </label>
+              <label>
+                Дата рождения
+                <input type="date" name="birthDate" required />
+              </label>
+              <button class="primary-btn large" type="submit">Зарегистрироваться</button>
+              <p id="registerMessage" class="feedback" aria-live="polite"></p>
+            </form>
+          </div>
+        </section>
+
+        <section id="game-screen" class="screen">
+          <div class="panel-card game-detail">
+            <div class="panel-header">
+              <button class="back-btn" type="button" data-target="home">←</button>
+              <h2 id="detailTitle">Игра</h2>
+            </div>
+            <div class="detail-hero">
+              <div id="detailIcon" class="detail-icon">🎮</div>
+              <div>
+                <p id="detailMeta" class="meta"></p>
+                <div class="stars">★★★★★</div>
               </div>
             </div>
-          </article>
-
-          <article class="product-card">
-            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80" alt="Кыргыз тон" />
-            <div class="product-info">
-              <h3>Күндөлүк тон</h3>
-              <p>Ыңгайлуу жана кооз</p>
-              <div class="product-footer">
-                <span>12 900 сом</span>
-                <a href="#contact" class="buy-btn">Сатып алуу</a>
+            <div class="screenshots">
+              <div class="screen-shot"></div>
+              <div class="screen-shot"></div>
+              <div class="screen-shot"></div>
+            </div>
+            <div class="detail-text">
+              <h3>Описание</h3>
+              <p id="detailDescription"></p>
+            </div>
+            <div class="detail-stats">
+              <div>
+                <strong id="detailRating">4.9</strong>
+                <span>Рейтинг</span>
+              </div>
+              <div>
+                <strong>248</strong>
+                <span>Отзывы</span>
+              </div>
+              <div>
+                <strong id="detailSize">1.2 ГБ</strong>
+                <span>Размер</span>
               </div>
             </div>
-          </article>
-
-          <article class="product-card">
-            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80" alt="Кыргыз ак кафтанд" />
-            <div class="product-info">
-              <h3>Ак кафтанд</h3>
-              <p>Премиум үлгү</p>
-              <div class="product-footer">
-                <span>24 000 сом</span>
-                <a href="#contact" class="buy-btn">Сатып алуу</a>
+            <button id="downloadBtn" class="primary-btn large" type="button">Скачать</button>
+            <div class="progress-row" aria-hidden="true">
+              <div id="progressBar" class="progress-bar"></div>
+            </div>
+            <p id="downloadMessage" class="feedback" aria-live="polite"></p>
+            <div class="reviews-block">
+              <h3>Отзывы пользователей</h3>
+              <div class="review-card">
+                <strong>Алина</strong>
+                <p>Очень плавный геймплей и красивый дизайн.</p>
+              </div>
+              <div class="review-card">
+                <strong>Макс</strong>
+                <p>Скачал за 2 минуты, игра стоит своих денег.</p>
               </div>
             </div>
-          </article>
+          </div>
+        </section>
+      </main>
 
-          <article class="product-card">
-            <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80" alt="Кыргыз шапан" />
-            <div class="product-info">
-              <h3>Шапан</h3>
-              <p>Улуттук сән</p>
-              <div class="product-footer">
-                <span>10 200 сом</span>
-                <a href="#contact" class="buy-btn">Сатып алуу</a>
-              </div>
-            </div>
-          </article>
+      <nav class="bottom-nav">
+        <button class="nav-btn active" type="button" data-target="home">Домой</button>
+        <button class="nav-btn" type="button" data-target="register">Профиль</button>
+        <button class="nav-btn" type="button" data-target="game">Игра</button>
+      </nav>
+    </div>
 
-          <article class="product-card">
-            <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80" alt="Кыргыз чапан" />
-            <div class="product-info">
-              <h3>Чапан</h3>
-              <p>Традиция жана ыңгай</p>
-              <div class="product-footer">
-                <span>15 800 сом</span>
-                <a href="#contact" class="buy-btn">Сатып алуу</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=80" alt="Кыргыз тилки" />
-            <div class="product-info">
-              <h3>Тилки баштык</h3>
-              <p>Этно аксессуар</p>
-              <div class="product-footer">
-                <span>7 300 сом</span>
-                <a href="#contact" class="buy-btn">Сатып алуу</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80" alt="Кыргыз белдемче" />
-            <div class="product-info">
-              <h3>Белдемче</h3>
-              <p>Кооз өрнек</p>
-              <div class="product-footer">
-                <span>9 400 сом</span>
-                <a href="#contact" class="buy-btn">Сатып алуу</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="product-card">
-            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80" alt="Кыргыз ат кийими" />
-            <div class="product-info">
-              <h3>Ат аягы</h3>
-              <p>Көңүлдүн сән</p>
-              <div class="product-footer">
-                <span>11 600 сом</span>
-                <a href="#contact" class="buy-btn">Сатып алуу</a>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section class="about-section" id="about">
-      <div class="container about-grid">
-        <div>
-          <p class="eyebrow">Биз жөнүндө</p>
-          <h2>Кыргыз улуттук кийимдеринин бай мурасы</h2>
-          <p>Биз кыргыз этно стилдерин заманбап туюнтмалар менен айкалыштырып, улуттук каармандуулуктун жана үстүнкү сәндин жаңы маанисин жаратабыз. Ар бир үлгү — ыргактуу, кооз жана көңүлдүү.</p>
-        </div>
-        <div class="about-card">
-          <p>Традициядан келечекке</p>
-          <h3>Сиз үчүн таңдалган үлгүлөр</h3>
-          <ul>
-            <li>Качандык жана сапаттуу материалдар</li>
-            <li>Тарыхый өрнектер</li>
-            <li>Заманбап кесилиши</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="reviews-section">
-      <div class="container">
-        <div class="section-title">
-          <p class="eyebrow">Кардарлардын пикирлери</p>
-          <h2>Бизге ишенгендердин сөзү</h2>
-        </div>
-
-        <div class="review-grid">
-          <article class="review-card">
-            <p>“Кийимдердин сапаты таң калыштуу. Ар бир бөлүгү кыргыз мәдениетине туура келет.”</p>
-            <strong>Айгүл</strong>
-          </article>
-          <article class="review-card">
-            <p>“Кыргыз этно стилдин эң кооз үлгүлөрүн бул жерде таптым. Сунуштайм!”</p>
-            <strong>Бакыт</strong>
-          </article>
-          <article class="review-card">
-            <p>“Тамаша дизайн, ыңгайлуу кызмат, жана өзгөчө атмосфера.”</p>
-            <strong>Нургул</strong>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="contact-section" id="contact">
-      <div class="container contact-grid">
-        <div>
-          <p class="eyebrow">Байланыш</p>
-          <h2>Бизге жазылыңыз</h2>
-          <p>Сатып алуу, жеке заказ же консультация үчүн төмөнкү байланыш жолдарын колдонсоңуз болот.</p>
-        </div>
-        <div class="contact-card">
-          <p><i class="fas fa-phone"></i> +996 700 123 456</p>
-          <p><i class="fab fa-whatsapp"></i> +996 555 123 456</p>
-          <p><i class="fab fa-instagram"></i> @etno.kg</p>
-          <p><i class="fas fa-envelope"></i> info@etno.kg</p>
-          <p><i class="fas fa-map-marker-alt"></i> Бишкек, Кыргыз Республикасы</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container footer-content">
-        <p>© 2026 Кыргыз Этно Кийимдери</p>
-        <div class="social-links">
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-telegram-plane"></i></a>
-        </div>
-      </div>
-    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
